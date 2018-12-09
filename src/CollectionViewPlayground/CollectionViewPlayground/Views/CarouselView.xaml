@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPlayground.Views.CarouselView"
+             Title="Carousel">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView                  
+                ItemsSource="{Binding Monkeys}"
+                Margin="12">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                         Orientation="Horizontal" 
+                         SnapPointsAlignment="Center" 
+                         SnapPointsType="Mandatory"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid 
+                            HeightRequest="300"
+                            WidthRequest="300">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image 
+                                Grid.Row="0"
+                                Source="{Binding Image}"
+                                Aspect="AspectFill"/>
+                            <Label 
+                                Grid.Row="1"
+                                Text="{Binding Name}"
+                                MaxLines="1"
+                                FontSize="18"
+                                HorizontalOptions="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

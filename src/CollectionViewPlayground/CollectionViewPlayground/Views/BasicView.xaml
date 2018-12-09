@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPlayground.Views.BasicView"
+             Title="Basic">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView                  
+                ItemsSource="{Binding Monkeys}"
+                Margin="12">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid 
+                            HeightRequest="48"
+                            Margin="0, 0, 0, 6">
+                            <Label 
+                                Text="{Binding Name}"
+                                FontSize="18"
+                                VerticalOptions="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

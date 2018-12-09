@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPlayground.Views.HorizontalListView"
+             Title="Horizontal List">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView                  
+                ItemsSource="{Binding Monkeys}"
+                Margin="12">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid 
+                            HeightRequest="150"
+                            WidthRequest="150">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image 
+                                Grid.Row="0"
+                                Source="{Binding Image}"
+                                Aspect="AspectFill"/>
+                            <Label 
+                                Grid.Row="1"
+                                Text="{Binding Name}"
+                                FontSize="18"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

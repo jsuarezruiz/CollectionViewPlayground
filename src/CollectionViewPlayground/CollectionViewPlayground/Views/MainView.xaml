@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPlayground.Views.MainView"
+             Title="CollectionView Playground">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+                Text="Basic"
+                Command="{Binding BasicCommand}"/>
+            <Button
+                Text="Carousel"
+                Command="{Binding CarouselCommand}"/>
+            <Button
+                Text="Horizontal List"
+                Command="{Binding HorizontalListCommand}"/>
+            <Button
+                Text="GridView"
+                Command="{Binding GridViewCommand}"/>
+            <Button
+                Text="Empty"
+                Command="{Binding EmptyCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

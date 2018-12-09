@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPlayground.Views.EmptyView"
+             Title="EmptyView">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView               
+                ItemsSource="{Binding Monkeys}">
+                <CollectionView.EmptyView>
+                    <Grid>
+                        <Label 
+                            Text="No items"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                    </Grid>
+                </CollectionView.EmptyView>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
