@@ -5,16 +5,16 @@
              Title="Carousel">
     <ContentPage.Content>
         <Grid>
-            <CollectionView                  
+            <CarouselView                  
                 ItemsSource="{Binding Monkeys}"
                 Margin="12">
-                <CollectionView.ItemsLayout>
+                <CarouselView.ItemsLayout>
                     <GridItemsLayout
                          Orientation="Horizontal" 
                          SnapPointsAlignment="Center" 
                          SnapPointsType="Mandatory"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Grid 
                             HeightRequest="300"
@@ -35,8 +35,8 @@
                                 HorizontalOptions="Center"/>
                         </Grid>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
