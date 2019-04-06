@@ -149,14 +149,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac">
-      <Version>4.8.1</Version>
+      <Version>4.9.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.8055-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.304370-pre8" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewPlayground\CollectionViewPlayground.csproj">
-      <Project>{C608EE0B-1E07-4153-8D54-242827CA2BDC}</Project>
+      <Project>{EDB78714-CF65-4D1C-9EFE-D9930C27C93D}</Project>
       <Name>CollectionViewPlayground</Name>
     </ProjectReference>
   </ItemGroup>
