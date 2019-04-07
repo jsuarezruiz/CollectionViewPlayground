@@ -1,4 +1,4 @@
-# Xamarin.Forms Visual Playground
+# Xamarin.Forms CollectionView Playground
 
 **Xamarin.Forms** sample to show the new **CollectionView** feature included in **4.0 preview** version.
 
