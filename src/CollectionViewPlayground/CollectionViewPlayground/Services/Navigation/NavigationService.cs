@@ -51,25 +51,18 @@ namespace CollectionViewPlayground.Services
 
         protected virtual async Task InternalNavigateToAsync(Type viewModelType, object parameter)
         {
-            try
+            Page page = CreateAndBindPage(viewModelType, parameter);
+
+            if (CurrentApplication.MainPage is NavigationPage navigationPage)
             {
-                Page page = CreateAndBindPage(viewModelType, parameter);
-
-                if (CurrentApplication.MainPage is NavigationPage navigationPage)
-                {
-                    await navigationPage.PushAsync(page);
-                }
-                else
-                {
-                    CurrentApplication.MainPage = new NavigationPage(page);
-                }
-
-                await (page.BindingContext as ViewModelBase).InitializeAsync(parameter);
+                await navigationPage.PushAsync(page);
             }
-            catch(Exception ex)
+            else
             {
-
+                CurrentApplication.MainPage = new NavigationPage(page);
             }
+
+            await (page.BindingContext as ViewModelBase).InitializeAsync(parameter);
         }
 
         protected Type GetPageTypeForViewModel(Type viewModelType)

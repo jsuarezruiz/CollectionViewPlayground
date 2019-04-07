@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -50,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac">
-      <Version>4.8.1</Version>
+      <Version>4.9.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.8055-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.304370-pre8" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
@@ -96,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewPlayground\CollectionViewPlayground.csproj">
-      <Project>{C608EE0B-1E07-4153-8D54-242827CA2BDC}</Project>
+      <Project>{EDB78714-CF65-4D1C-9EFE-D9930C27C93D}</Project>
       <Name>CollectionViewPlayground</Name>
     </ProjectReference>
   </ItemGroup>
